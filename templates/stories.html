@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style>
+        .important {
+            color: #336699;
+        }
+    </style>
+{% endblock %}
+
+{% block banner %}{% endblock %}
+
+{% block content %}
+    <h1>Stories</h1>
+    <p class="important">
+        You are reading story #{{ story_id or "nothing" }}
+    </p>
+{% endblock %}

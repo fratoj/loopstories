@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style>
+        .important {
+            color: #336699;
+        }
+    </style>
+{% endblock %}
+
+{% block banner %}
+<!--============================
+=            Banner            =
+=============================-->
+<section class="banner bg-banner-one overlay">
+    <div class="container">
+        {% include 'includes/banner.html' %}
+    </div>
+</section>
+<!--====  End of Banner  ====-->
+{% endblock %}
+
+{% block content %}
+    <h1>Index</h1>
+    <p class="important">
+        Welcome to my awesome homepage.
+    </p>
+{% endblock %}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Source: https://themefisher.com/products/eventre-event-conference-website-template/ -->
+    <!-- SITE TITTLE -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %} - LOOPstories</title>
+
+    <!-- PLUGINS CSS STYLE -->
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static', filename='plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="{{ url_for('static', filename='plugins/font-awsome/css/font-awesome.min.css') }}" rel="stylesheet">
+    <!-- Magnific Popup -->
+    <link href="{{ url_for('static', filename='plugins/magnific-popup/magnific-popup.css') }}" rel="stylesheet">
+    <!-- Slick Carousel -->
+    <link href="{{ url_for('static', filename='plugins/slick/slick.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='plugins/slick/slick-theme.css') }}" rel="stylesheet">
+    <!-- CUSTOM CSS -->
+        <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+    <!-- FAVICON -->
+    <link href="{{ url_for('static', filename='images/favicon.png') }}" rel="shortcut icon">
+
+</head>
+
+<body class="body-wrapper">
+
+
+<!--========================================
+=            Navigation Section            =
+=========================================-->
+
+<nav class="navbar main-nav border-less fixed-top navbar-expand-lg p-0">
+    <div class="container-fluid p-0">
+        {% include 'navigation.html' %}
+    </div>
+</nav>
+
+<!--====  End of Navigation Section  ====-->
+
+{% block banner %}{% endblock %}
+
+<!--===========================
+=            Main content     =
+============================-->
+
+<section class="section about">
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</section>
+
+<!--====  End of Main content  ====-->
+
+<!--============================
+=            Footer            =
+=============================-->
+
+<footer class="footer-main">
+    <div class="container">
+        {% include 'footer.html' %}
+    </div>
+</footer>
+<!-- Subfooter -->
+<footer class="subfooter">
+    <div class="container">
+        {% include 'sub_footer.html' %}
+    </div>
+</footer>
+
+<!--==== End of footer / subfooter -->
+
+<!-- JAVASCRIPTS -->
+<!-- jQuey -->
+<script src="{{ url_for('static', filename='plugins/jquery/jquery.js') }}"></script>
+<!-- Popper js -->
+<script src="{{ url_for('static', filename='plugins/popper/popper.min.js') }}"></script>
+<!-- Bootstrap 4 -->
+<script src="{{ url_for('static', filename='plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+<!-- Smooth Scroll -->
+<script src="{{ url_for('static', filename='plugins/smoothscroll/SmoothScroll.min.js') }}"></script>
+<!-- Isotope -->
+<script src="{{ url_for('static', filename='plugins/isotope/mixitup.min.js') }}"></script>
+<!-- Magnific Popup -->
+<script src="{{ url_for('static', filename='plugins/magnific-popup/jquery.magnific-popup.min.js') }}"></script>
+<!-- Slick Carousel -->
+<script src="{{ url_for('static', filename='plugins/slick/slick.min.js') }}"></script>
+<!-- SyoTimer -->
+<script src="{{ url_for('static', filename='plugins/syotimer/jquery.syotimer.min.js') }}"></script>
+<!-- Google Mapl -->
+{#  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"></script>#}
+{#  <script type="text/javascript" src="{{ url_for('static', filename='plugins/google-map/gmap.js') }}"></script>#}
+<!-- Custom Script -->
+<script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+</body>
+
+</html>

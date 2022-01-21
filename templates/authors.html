@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style>
+        .important {
+            color: #336699;
+        }
+    </style>
+{% endblock %}
+
+{% block banner %}{% endblock %}
+
+{% block content %}
+    <h1>Authors</h1>
+    <p class="important">
+        Don't be fooled, it's all me.
+    </p>
+{% endblock %}

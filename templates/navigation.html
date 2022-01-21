@@ -1,0 +1,39 @@
+<!-- logo -->
+<a class="navbar-brand" href="{{ url_for('index') }}">
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo">
+</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+    <span class="fa fa-bars"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mx-auto">
+        <li class="nav-item dropdown active dropdown-slide">
+            <a class="nav-link" href="/">Home
+                <span>/</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('authors') }}">Authors
+                <span>/</span>
+            </a>
+        </li>
+        <li class="nav-item dropdown dropdown-slide">
+            <a class="nav-link" href="#" data-toggle="dropdown">Stories<span>/</span></a>
+            <!-- Dropdown list -->
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="{{ url_for('stories', story_id=1) }}">Story #1</a>
+                <a class="dropdown-item" href="{{ url_for('stories', story_id=2) }}">Story #2</a>
+                <a class="dropdown-item" href="{{ url_for('stories', story_id=3) }}">Story #3</a>
+                <a class="dropdown-item" href="{{ url_for('stories', story_id=4) }}">Story #4</a>
+                <a class="dropdown-item" href="{{ url_for('stories', story_id=5) }}">Story #5</a>
+                <a class="dropdown-item" href="{{ url_for('stories', story_id=6) }}">Story #6</a>
+                <a class="dropdown-item" href="{{ url_for('stories', story_id=7) }}">Story #7</a>
+                <a class="dropdown-item" href="{{ url_for('stories', story_id=8) }}">Story #8</a>
+            </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+        </li>
+    </ul>
+</div>
