@@ -1,37 +1,30 @@
 from flask import Flask, render_template
 
+from authors import authors_blueprint
 from blueprint_example import example_blueprint
+from stories import stories_blueprint
 
 app = Flask(__name__)
 app.register_blueprint(example_blueprint, url_prefix="/blue")
+app.register_blueprint(stories_blueprint, name="stories", url_prefix="/stories")
+app.register_blueprint(authors_blueprint, name="authors", url_prefix="/authors")
 
 
-@app.route('/')
+@app.route("/")
 def index():
-    return render_template('index.html')
+    return render_template("index.html")
 
 
-@app.route('/authors')
-def authors():
-    return render_template('authors.html')
-
-
-@app.route('/contact')
+@app.route("/contact")
 def contact():
-    return render_template('contact.html')
+    return render_template("contact.html")
 
 
-@app.route('/stories/')
-@app.route('/stories/<story_id>')
-def stories(story_id=None):
-    return render_template('stories.html', story_id=story_id)
-
-
-@app.route('/hello/')
-@app.route('/hello/<name>')
+@app.route("/hello/")
+@app.route("/hello/<name>")
 def hello_world(name=None):
-    return render_template('hello.html', name=name)
+    return render_template("hello.html", name=name)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run()

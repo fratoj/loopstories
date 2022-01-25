@@ -9,11 +9,9 @@
     </style>
 {% endblock %}
 
-{% block banner %}{% endblock %}
-
 {% block content %}
     <h1>Stories</h1>
     <p class="important">
-        You are reading story #{{ story_id or "nothing" }}
+        You are reading {{ story_text }}
     </p>
 {% endblock %}
